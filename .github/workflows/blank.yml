@@ -27,4 +27,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        run: env | sort
+        run: |
+          env | sort
+          foo=${GITHUB_REPOSITORY#"${GITHUB_REPOSITORY_OWNER}/"}
+          echo $foo
