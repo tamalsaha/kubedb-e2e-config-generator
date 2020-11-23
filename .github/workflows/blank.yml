@@ -29,5 +29,6 @@ jobs:
       - name: Run a one-line script
         run: |
           env | sort
+          echo "________________"
           foo=${GITHUB_REPOSITORY#"${GITHUB_REPOSITORY_OWNER}/"}
           echo $foo
